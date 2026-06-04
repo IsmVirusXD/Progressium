@@ -2,7 +2,7 @@ import { Playpen_Sans, Geist, Geist_Mono } from "next/font/google";
 
 const playpen = Playpen_Sans({
   variable: "--font-playpen",
-  weight: ["200", "400", "600"],
+  weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
