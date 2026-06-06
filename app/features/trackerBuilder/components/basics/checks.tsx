@@ -6,6 +6,7 @@ import {
   SquareCheckBig,
   SquareX,
 } from "lucide-react";
+import { twJoin } from "tailwind-merge";
 
 interface CheckProps {
   mode: "square" | "circle";
@@ -38,7 +39,7 @@ export function Checker({
       ? "text-done"
       : "text-secondary";
 
-  const tailwindConfig: string = [iconStyle, colorStyle].join(" ");
+  const tailwindConfig: string = twJoin(iconStyle, colorStyle);
 
   const iconConfig = ICON_MAP[mode];
   const IconComponent = isErro

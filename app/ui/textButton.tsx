@@ -38,21 +38,15 @@ export function TextButton({
       ? "cursor-pointer"
       : "cursor-default";
 
-  const tailwindConfig: string = [
+  const tailwindConfig: string = twJoin(
     SIZE_MAP[size],
     baseStyle,
     typography.button,
-  ].join(" ");
+    activate ? COLOR_MAP[type] : COLOR_MAP["deactivate"],
+  );
 
   return (
-    <button
-      className={twJoin(
-        tailwindConfig,
-        activate ? COLOR_MAP[type] : COLOR_MAP["deactivate"],
-      )}
-      onClick={onClick}
-      id={id}
-    >
+    <button className={tailwindConfig} onClick={onClick} id={id}>
       {text}
     </button>
   );
