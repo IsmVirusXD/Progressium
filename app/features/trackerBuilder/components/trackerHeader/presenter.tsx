@@ -1,3 +1,7 @@
+import { typography } from "@/app/styles/fonts/typografy";
+import { TextButton } from "@/app/ui/textButton";
+import { twJoin } from "tailwind-merge";
+
 interface TrackerHeaderPresenterProps {
   title: string;
   author: string;
@@ -13,34 +17,48 @@ export default function TrackerHeaderPresenter({
   theme,
   clickHandler,
 }: TrackerHeaderPresenterProps) {
+  const cyId = "header_dashboard";
   return (
     <div
-      id="header_dashboard"
-      className="grid grid-cols-[100px_1fr_300px] grid-rows-2 border-3 m-5 px-6 py-4 gap-x-4 border-secondary shadow-md"
+      id={cyId}
+      className="grid grid-cols-[100px_1fr_250px] grid-rows-2 border-3 m-5 px-6 py-4 gap-x-4 border-secondary shadow-md"
     >
       <img
         src={image}
-        className="h-20 w-20 row-span-2 col-start-1 row-start-1 content-center"
+        className="h-25 w-25 row-span-2 col-start-1 row-start-1 align-center"
+        id={`${cyId}-image`}
       />
-      <h1 className=" font-heading text-4xl font-bold content-end-safe">
+      <h1 id={`${cyId}-title`} className={twJoin("content-end", typography.h1)}>
         {title}
       </h1>
       {/* //Subtitle */}
-
-      <h2 className="row-start-2 font-heading text-2xl font-medium content-baseline">
-        <span className="text-base text-primary font-light mr-2">Made By:</span>
+      <h2
+        id={`${cyId}-author`}
+        className={twJoin("row-start-2 content-start", typography.h2)}
+      >
+        <span className={twJoin("mr-2 text-primary", typography.subtitle)}>
+          Made By:
+        </span>
         {author}
       </h2>
-      <h3 className="col-start-3 font-heading text-2xl font-medium content-baseline">
-        <span className="text-base text-primary font-light mr-2">Theme:</span>
-        {theme}
-      </h3>
-      <button
-        className="border col-start-3 row-start-2 rounded-3xl hover:bg-done hover:text-background"
-        onClick={clickHandler}
+      <h4
+        id={`${cyId}-themeName`}
+        className={twJoin("col-start-3 content-end", typography.h4)}
       >
-        Change Theme
-      </button>
+        <span className={twJoin("text-primary mr-2", typography.subtitle)}>
+          Theme:
+        </span>
+        {theme}
+      </h4>
+      <div className="content-center">
+        <TextButton
+          text="Change Theme"
+          type="text"
+          size="large"
+          cyId={cyId}
+          onClick={clickHandler}
+        />
+      </div>
     </div>
   );
 }
