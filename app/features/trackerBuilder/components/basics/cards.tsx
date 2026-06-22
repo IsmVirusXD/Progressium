@@ -25,6 +25,7 @@ export function Card({
   const colorStyle = isDone
     ? "text-done border-done scrollbar-thumb-done"
     : "text-primary border-primary scrollbar-thumb-primary";
+
   const cardConfig =
     "flex flex-col bg-transparent border-2 gap-3 p-2.5 overflow-hidden";
 
