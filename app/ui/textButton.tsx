@@ -47,7 +47,12 @@ export function TextButton({
   );
 
   return (
-    <button className={tailwindConfig} onClick={onClick} id={id}>
+    <button
+      className={tailwindConfig}
+      onClick={onClick}
+      id={id}
+      disabled={!activate}
+    >
       {text}
     </button>
   );
