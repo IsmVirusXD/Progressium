@@ -94,4 +94,4 @@ content:
       max_rows: 14
       max_cols: 14
       all_counters_goal: 99
-      participants: *extended_chars
+      items: *extended_chars

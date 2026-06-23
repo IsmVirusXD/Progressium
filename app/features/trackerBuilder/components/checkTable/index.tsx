@@ -3,12 +3,7 @@
 import { useMemo, useState } from "react";
 import { CheckTablePresenter } from "./presenter";
 import generateCheckTable from "../../functions/generateTable";
-
-interface CheckTableProps {
-  title: string;
-  info?: string;
-  data: checkRow[];
-}
+import { CheckTableProps } from "../../interfaces/component";
 
 export function CheckTable({ title, info, data }: CheckTableProps) {
   const idBase = title.toLocaleLowerCase().replace(/\s+/g, "");

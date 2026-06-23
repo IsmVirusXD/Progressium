@@ -1,6 +1,7 @@
 import { ChevronDown, Minus, Square, SquareCheckBigIcon } from "lucide-react";
 import { Fragment, ReactNode } from "react";
 import { twJoin } from "tailwind-merge";
+import { checkRow } from "../../interfaces/component";
 
 interface CheckTableProps {
   idBase: string;
@@ -34,11 +35,11 @@ export function CheckTablePresenter({
   const gridConfig = ``;
 
   const generateComponentList = (size: number, row: number) => {
-    const itens = [];
+    const items = [];
 
     for (let i = 0; i < size; i++) {
       let index: string = `${row}:${i}`;
-      itens.push(
+      items.push(
         <button
           key={idBase + index.toString()}
           onClick={() => {
@@ -59,7 +60,7 @@ export function CheckTablePresenter({
       );
     }
 
-    return <div className="flex size-3 gap-2">{itens}</div>;
+    return <div className="flex size-3 gap-2">{items}</div>;
   };
 
   return (
