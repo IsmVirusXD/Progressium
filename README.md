@@ -2,19 +2,22 @@
 > Status do Projeto: Em desenvolvimento inicial (Pre-alpha).
 
 # Progressium - 0.0.0
+
 > O Progressium é uma plataforma de trackers para gerenciamento de progresso em videogames. O objetivo é centralizar requisitos de 100% (Completionism), desafios de comunidade (Challenge Runs) e suporte ao RetroAchievements.
 
 **Acesse nosso site em:** [Link ainda não disponível]
 
 **Contador de Trackers:**
+
 - `0x` 🏆 Completionist
 - `0x` 👾 [Retro Achievements](https://retroachievements.org)
 - `0x` ⚔️ Challenge Runs
-- `0x` 🏅 Achievement Hunting 
+- `0x` 🏅 Achievement Hunting
 
 ## Sobre o Projeto
 
 ### Contexto
+
 Quando estamos tentando atingir os 100% de um jogo, completá-lo ou coletar todas as suas conquistas, é comum perdermos horas procurando todos os pré-requisitos necessários. Esta aplicação foi desenvolvida para resolver esse problema. Com o **Progressium**, podemos concentrar diversos trackers em um só lugar, diminuindo a busca incessante por informações e oferecendo um sistema dinâmico para marcar e visualizar o progresso até o objetivo final.
 
 O projeto também visa o desenvolvimento em comunidade, para que novos usuários possam criar seus próprios trackers e temas, tornando o ecossistema cada vez mais completo. Além disso, buscamos sugestões para a elaboração de novos componentes úteis aos trackers.
@@ -23,12 +26,14 @@ O projeto também visa o desenvolvimento em comunidade, para que novos usuários
 > Infelizmente, até o momento, ainda não disponibilizamos essa funcionalidade. Assim que terminarmos a elaboração do sistema básico, publicaremos uma documentação para que a comunidade possa adicionar seus próprios trackers. Para acompanhar o desenvolvimento, verifique nosso Roadmap ou a página de Issues.
 
 ### Público-Alvo
+
 - Jogadores que desejam finalizar jogos em 100%.
 - Pessoas que querem registrar seu progresso em desafios específicos.
 - Completionists.
 - Achievement Hunters.
 
 ### Fluxo de Utilização
+
 [ Ainda em Desenvolvimento ]
 
 ---
@@ -36,16 +41,20 @@ O projeto também visa o desenvolvimento em comunidade, para que novos usuários
 ## Parte Técnica
 
 ### Tecnologias Utilizadas
+
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
 
 ### Arquitetura: Feature Base
-A arquitetura escolhida será a Feature Base, visto que sua distribuição por funcionalidades faz sentido em uma aplicação cuja ideia principal é a criação de itens. Dessa forma, a organização por Features facilitará a manutenção e a adição de novos serviços.
+
+A arquitetura escolhida será a Feature Base, visto que sua distribuição por funcionalidades faz sentido em uma aplicação cuja ideia principal é a criação de items. Dessa forma, a organização por Features facilitará a manutenção e a adição de novos serviços.
 
 ### Padrão de Design: Page - Feature - UI
+
 Juntamente com a arquitetura Feature Base, utilizaremos o Design: Page - Feature - UI para definir a responsabilidade de cada camada:
+
 - **Page**: Responsável por montar as páginas com seus respectivos componentes.
 - **Features**: Responsável pelo controle e lógica.
 - **UI**: Responsável única e exclusivamente pela exibição.
@@ -65,12 +74,12 @@ data/           # Lista com todas as estruturas de trackers disponíveis em YAML
 
 Nosso Roadmap está detalhado na página de Issues, onde listamos as necessidades da comunidade e organizamos as tarefas prioritárias.
 
-
 ## Contribuição
 
 Todas as contribuições devem ser abertas na página de Issues, utilizando as tags respectivas e seguindo os modelos abaixo. Cada sugestão será avaliada pela equipe para posterior inclusão no Roadmap. Respeite as regras de cada categoria e siga os padrões:
 
 ### New Features
+
 ```
 
 ## 📝 Visão Geral
@@ -89,7 +98,9 @@ Todas as contribuições devem ser abertas na página de Issues, utilizando as t
 - [ ] [Critério 1]
 - [ ] [Critério 2]
 ```
+
 ### Bugs
+
 ```
 ## 🐞 Descrição do Erro
 ## 🕹️ Passos para Reproduzir
@@ -135,6 +146,7 @@ Todas as contribuições devem ser abertas na página de Issues, utilizando as t
 ```
 
 ### Temas
+
 ```
 ## 🎨 Cadastro de Tema / Requisitos Visuais
 - **Nome do Tema**: [Ex: Midnight Dashboard]
