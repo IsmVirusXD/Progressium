@@ -1,4 +1,5 @@
 export interface IRecipeInfo {
+  fileName: string;
   title: string;
   author: string;
   game: string;

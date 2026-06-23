@@ -36,7 +36,7 @@ content:
       items: *base_chars
 
   - TextList:
-      title: "Scenario Mode - Hardcore"      
+      title: "Scenario Mode - Hardcore"
       description: "Complete the scenario without using any retries."
       items: *base_chars
 
